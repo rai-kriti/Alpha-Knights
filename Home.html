@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Feedback Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            width: 0;
+            animation: typing 3s steps(20, end) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 3.5s forwards;
+        }
+    </style>
+</head>
+<body class="bg-white text-blue-700 font-sans">
+    <header class="bg-gray-200 p-4 flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="https://sl.bing.net/cBoofsUlMhU" alt="Logo" class="h-10 w-10 rounded-full mr-4">
+            <h1 class="text-2xl font-semibold">Power Feedback Portal</h1>
+        </div>
+        <div>
+            <button onclick="toggleModal()" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-all">Login</button>
+            <button class="px-4 py-2 bg-green-500 text-white rounded-lg ml-2 hover:bg-green-700 transition-all">Signup</button>
+        </div>
+    </header>
+    
+    <main class="flex flex-col items-center justify-center h-[80vh] text-center px-4">
+        <h2 class="text-3xl font-bold mb-4"><span class="typing-effect">Your Voice Matters!</span></h2>
+        <p class="text-lg text-gray-600 mb-6 fade-in">A portal for feedback and complaints regarding electricity in your area.</p>
+    </main>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg w-1/3 shadow-xl text-center text-blue-700">
+            <h2 class="text-2xl font-bold mb-4">Login</h2>
+            <button class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg mb-2 hover:bg-blue-700">User Login</button>
+            <button class="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-700">Admin Login</button>
+            <button onclick="toggleModal()" class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-700">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        function toggleModal() {
+            document.getElementById("loginModal").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
