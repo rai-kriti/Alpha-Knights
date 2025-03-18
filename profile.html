@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            width: 0;
+            animation: typing 2s steps(40, end) forwards;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-blue-300 text-gray-900">
+    <header class="bg-blue-600 text-white p-6 shadow-lg flex justify-between items-center">
+        <h1 class="text-2xl font-bold">User Profile</h1>
+        <div class="flex space-x-4">
+            <button class="bg-blue-500 px-5 py-2 rounded-lg text-white hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-lg">My Profile</button>
+            <button class="bg-red-500 px-5 py-2 rounded-lg text-white hover:bg-red-700 transition-transform transform hover:scale-105 shadow-lg">Logout</button>
+        </div>
+    </header>
+    
+    <div class="container mx-auto p-8">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-6"><span class="typing-effect">Welcome User! Update your profile details.</span></h2>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <!-- <h3 class="text-xl font-bold text-blue-600">User Profile</h3> -->
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-full w-24 h-24 mt-4 border-4 border-gray-300 shadow-md">
+                <input type="file" class="mt-3 p-2 border rounded-lg w-full">
+            </div>
+            
+            <input type="text" class="w-full p-3 mt-3 border rounded-lg focus:ring-2 focus:ring-blue-400 transition" placeholder="Full Name">
+            <input type="text" class="w-full p-3 mt-3 border rounded-lg focus:ring-2 focus:ring-blue-400 transition" placeholder="Address">
+            <input type="email" class="w-full p-3 mt-3 border rounded-lg focus:ring-2 focus:ring-blue-400 transition" placeholder="Email">
+            <select class="w-full p-3 mt-3 border rounded-lg focus:ring-2 focus:ring-blue-400 transition">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="text" class="w-full p-3 mt-3 border rounded-lg focus:ring-2 focus:ring-blue-400 transition" placeholder="Phone Number">
+            
+            <div class="mt-4 flex justify-between">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-lg">Update Profile</button>
+                <button class="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-transform transform hover:scale-105 shadow-lg">Change Password</button>
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-lg">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
