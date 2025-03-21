@@ -23,7 +23,16 @@
     </style>
 </head>
 <body class="bg-white text-blue-700 font-sans">
-    <header class="bg-gray-200 p-4 flex justify-between items-center shadow-lg">
+     <!-- Background Video -->
+     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="vdobg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay to darken the video for better text readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+    <header class="relative z-20 p-4 flex justify-between items-center ]">
         <div class="flex items-center">
             <img src="https://sl.bing.net/cBoofsUlMhU" alt="Logo" class="h-10 w-10 rounded-full mr-4">
             <h1 class="text-2xl font-semibold">Power Feedback Portal</h1>
@@ -34,9 +43,12 @@
         </div>
     </header>
     
-    <main class="flex flex-col items-center justify-center h-[80vh] text-center px-4">
+    <main class="relative flex flex-col items-center justify-center h-[80vh] text-center px-4">
+        
+    <div class="relative z-10 text-white">
         <h2 class="text-3xl font-bold mb-4"><span class="typing-effect">Your Voice Matters!</span></h2>
-        <p class="text-lg text-gray-600 mb-6 fade-out">A portal for feedback and complaints regarding electricity in your area.</p>
+        <p class="text-lg text-gray-100 mb-6 fade-out">A portal for feedback and complaints regarding electricity in your area.</p>
+    </div>
     </main>
     
     <!-- Login Modal -->
